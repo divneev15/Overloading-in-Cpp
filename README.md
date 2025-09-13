@@ -152,32 +152,58 @@ Sum: 4 + 9i
 #### 📜 Algorithm:
 
 ```cpp
-1. Define a class Box with private members:
-   - length
-   - width
-   - height
+1. Start
 
-2. Create a constructor:
-   - Accepts up to 3 double values for dimensions
-   - Uses default values (0) if not provided
+2. Define a class named Box:
+   a. Declare private data members:
+      - double length
+      - double width
+      - double height
 
-3. Overload the + operator:
-   a. Create a new Box object
-   b. Add corresponding dimensions of current and otherBox
-   c. Return the resulting Box
+3. Define a constructor:
+   a. Accepts three parameters (l, w, h) with default values as 0.
+   b. Initialize length = l, width = w, height = h
 
-4. Overload the - operator:
-   a. Create a new Box object
-   b. Subtract dimensions of otherBox from current object
-   c. Return the resulting Box
+4. Overload the '+' operator:
+   a. Define operator+() as a member function.
+   b. Accept another Box object as parameter (const reference).
+   c. Create a new Box object 'result'.
+   d. Add corresponding dimensions:
+      - result.length = this->length + otherBox.length
+      - result.width  = this->width + otherBox.width
+      - result.height = this->height + otherBox.height
+   e. Return the 'result' Box object.
 
-5. Define a display() function to print length, width, and height.
+5. Overload the '-' operator:
+   a. Define operator-() as a member function.
+   b. Accept another Box object as parameter (const reference).
+   c. Create a new Box object 'result'.
+   d. Subtract corresponding dimensions:
+      - result.length = this->length - otherBox.length
+      - result.width  = this->width - otherBox.width
+      - result.height = this->height - otherBox.height
+   e. Return the 'result' Box object.
 
-6. In main():
-   a. Create two Box objects (box1 and box2)
-   b. Display their dimensions
-   c. Add and subtract the boxes using overloaded operators
-   d. Display results of both operations
+6. Define a member function display():
+   a. Print length, width, and height.
+
+7. In main():
+   a. Create two Box objects:
+      - box1(5, 5, 2)
+      - box2(2, 4, 1)
+
+   b. Display box1 and box2 dimensions.
+
+   c. Add boxes using:
+      - totalBox1 = box1 + box2
+
+   d. Subtract boxes using:
+      - totalBox2 = box1 - box2
+
+   e. Display dimensions of totalBox1 and totalBox2
+
+8. End
+
 ```
 
 #### 🖥️ Sample Output:
