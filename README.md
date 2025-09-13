@@ -152,57 +152,27 @@ Sum: 4 + 9i
 #### 📜 Algorithm:
 
 ```cpp
-1. Start
+1. Define class Box with private: length, width, height.
 
-2. Define a class named Box:
-   a. Declare private data members:
-      - double length
-      - double width
-      - double height
+2. Constructor initializes length, width, height.
 
-3. Define a constructor:
-   a. Accepts three parameters (l, w, h) with default values as 0.
-   b. Initialize length = l, width = w, height = h
+3. Overload operator+:
+   - Add corresponding dimensions of two Box objects.
+   - Return new Box with summed dimensions.
 
-4. Overload the '+' operator:
-   a. Define operator+() as a member function.
-   b. Accept another Box object as parameter (const reference).
-   c. Create a new Box object 'result'.
-   d. Add corresponding dimensions:
-      - result.length = this->length + otherBox.length
-      - result.width  = this->width + otherBox.width
-      - result.height = this->height + otherBox.height
-   e. Return the 'result' Box object.
+4. Overload operator-:
+   - Subtract corresponding dimensions.
+   - Return new Box with difference.
 
-5. Overload the '-' operator:
-   a. Define operator-() as a member function.
-   b. Accept another Box object as parameter (const reference).
-   c. Create a new Box object 'result'.
-   d. Subtract corresponding dimensions:
-      - result.length = this->length - otherBox.length
-      - result.width  = this->width - otherBox.width
-      - result.height = this->height - otherBox.height
-   e. Return the 'result' Box object.
+5. Define display() to print dimensions.
 
-6. Define a member function display():
-   a. Print length, width, and height.
+6. In main():
+   - Create box1 and box2.
+   - Display both boxes.
+   - Compute totalBox1 = box1 + box2.
+   - Compute totalBox2 = box1 - box2.
+   - Display totalBox1 and totalBox2.
 
-7. In main():
-   a. Create two Box objects:
-      - box1(5, 5, 2)
-      - box2(2, 4, 1)
-
-   b. Display box1 and box2 dimensions.
-
-   c. Add boxes using:
-      - totalBox1 = box1 + box2
-
-   d. Subtract boxes using:
-      - totalBox2 = box1 - box2
-
-   e. Display dimensions of totalBox1 and totalBox2
-
-8. End
 
 ```
 
